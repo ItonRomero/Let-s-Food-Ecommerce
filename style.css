@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&display=swap');
+
+:root {
+      --primary-color : #FFCB45;
+      --secondary-color : #F28B42;
+      --bg-color : #FFF9EA;
+      --dark-color : #1D1D1D; 
+      --semi-dark-color : rgba(29, 29, 29, 0.7);
+
+      --fw7 : 700px;
+      --fw6 : 600px; 
+      --fw5 : 500px;
+      --fw4 : 400px 
+}
+
+* {
+      margin:  0;
+      padding: 0;
+}
+*,::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+      font-family: 'Readex Pro', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: rgba(29, 29, 29, 0.7);
+}
+a {
+      text-decoration: none;
+      color: inherit;
+}
+ul {
+      list-style: none;
+}
+img {
+      max-width: 100%;
+      vertical-align: middle;
+}
+h1 {
+      font-size: 48px;
+      font-weight: var(--fw6);
+}
+h2 {
+      font-size: 32px;
+      font-weight: var(--fw7);
+      color: var(--dark-color);
+}
+h3 {
+      font-size:  22px;
+      font-weight: var(--fw5);
+      color: var(--primary-color)
+}
+h4 {
+      font-size: 22px;
+      font-weight: var(--fw5);
+}    
+
+
+/* ................. 
+REUSABLE SELECTOR 
+................. */
+
+.container {
+      max-width: 1180px ;
+      margin: 0 auto;
+      padding: 0 0.938em; 
+}
+.small-container {
+      max-width: 1032px ;
+      margin: 0 auto;
+      padding: 0 0.938em; 
+}
+.column {
+      margin-left: 0.937em;
+      margin-right: 0.937em;
+}
+/* .column .row {
+      padding: 0 0 0.937em;
+} */
+.flexwrap {
+      display: flex;
+      flex-wrap: wrap;
+}
+.flexcenter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.flexitem {
+      display: flex;
+      align-items: center;
+}
+.flexcol {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+}
+
+
+
+
+
+/* ................. 
+MEDIA QUERIES
+................. */
+@media screen and  (min-width: 992px){
+      .container {
+            padding: 0 2em;
+      }
+}
