@@ -116,11 +116,15 @@ nav {
 nav .container {
      justify-content: space-between;
 }
+nav .nav-logo  {
+     align-items: flex-end;
+}
 nav .nav-logo p {
       color: var(--dark-color);
       font-size: 24px;
       font-weight: var(--fw6);
 }
+
 nav .nav-menu .flexitem  {
       gap: 37px;
       /* flex-wrap: wrap; */
@@ -132,22 +136,90 @@ nav .nav-menu  .flexitem li a  {
 nav .nav-menu  .flexitem li a:hover  {
       color: var(--dark-color);
 }
+
+/* links  */
+nav .nav-menu .flexitem .menu-links {
+    position: relative;
+   
+} 
+nav .nav-menu .flexitem .menu-links::after {
+    content: '';
+    width: 0;
+    height: 4px;
+    background: var(--primary-color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s ;
+} 
+nav .nav-menu .menu-links.active-link::after {
+      width: 95% ;
+}
+
+
 nav .nav-btns .flexitem  {
       gap: 32px;
 }
 nav .nav-btns .flexitem li svg {
       margin-right: 16px;
-      font-size: 22px;
+      font-size: 25px;
 }
-
+nav .nav-btns ul li:nth-child(3) svg {
+      font-size: 19px;
+}
 nav .nav-btns .flexitem li a:hover svg {
       color: var(--dark-color);
 }
+/* MENU-ICON  */
+nav .nav-btns .menu-icon {
+      display: none;
+}
+
+
+
+
 /* ................. 
 MEDIA QUERIES
 ................. */
-/* @media screen and  (min-width: 992px){
-      .container {
-            padding: 0 2em;
+ /* @media screen and  (min-width: 767px) and (max-width: 1155px){ */
+ @media screen and (max-width: 1155px){
+      /* hide navigation list items  */
+      nav .nav-menu {
+            display: flex;
+            justify-content: center;
       }
-} */
+      /* display menu icon  */
+      nav .nav-btns .menu-icon {
+            display: flex;
+      }
+
+      nav .nav-menu {
+            background: var(--bg-color);
+            width: 300px;
+            position: absolute;
+            right: 0;
+            top: 15%;
+           /* transition: all 0.3s ease; */
+      }
+      nav .nav-menu .flexitem  {
+          flex-direction: column;  
+          padding: 20px;
+          height: 100vh;
+            
+}
+
+
+} 
+
+@media screen and (max-width: 767px) {
+      .container {
+            padding: 0;
+      }
+       /* hide navigation icons  */
+      nav .nav-btns ul li:nth-child(1),
+      nav .nav-btns ul li:nth-child(2),
+      nav .nav-btns ul li:nth-child(3) {
+            display: none;
+      }
+
+}
