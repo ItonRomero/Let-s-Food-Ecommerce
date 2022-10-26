@@ -94,7 +94,7 @@ REUSABLE SELECTOR
             display: flex;
             align-items: center;
             flex-wrap: wrap;
-             justify-content: space-around;
+            justify-content: space-around;
             text-align: left;
       }
       .col-2 {
@@ -111,9 +111,7 @@ REUSABLE SELECTOR
       .col-4 {
             flex-basis: 25%;
             padding: 10px;
-            min-width: 200px;
-            margin-bottom: 50px;
-            transition: transform 0.5s;
+            min-width: 300px;
       }
       .col-5{
             width: 160px;
@@ -130,6 +128,12 @@ REUSABLE SELECTOR
       } 
 }
 
+ /* for desktop screen  */
+  @media screen and  (min-width: 1024px) {
+        .col-4 {
+            min-width: 200px;
+      }
+  }
 
 
 .flexcenter {
@@ -149,6 +153,11 @@ REUSABLE SELECTOR
       padding: 11px 24px;
       border-radius: 50px;
       color: var(--dark-color);
+      transition: all 0.3s ease;
+}
+.btn:hover {
+      background: #F28B42;
+      /* opacity: 0.2 */
 }
 
 /* ................. 
@@ -311,9 +320,54 @@ MENU SECTION STYLING
      max-width: 439px;
      margin: 0 auto;
 }
-
-
-
+.menu-section .card {
+      background: #F1F1F1;
+      border-radius: 10px;
+      filter: drop-shadow(2px 5px 12px rgba(0, 0, 0, 0.15));
+      transition: all 0.3s ease;
+}
+.menu-section .card:hover {
+      border-radius: 50px;
+      filter: drop-shadow(2px 5px 12px rgba(0, 0, 0, 0.5));  
+      scale: 1.1; 
+}
+.menu-section .card img {
+      margin: 13px 25px 16px;
+}
+.menu-section .card-text {
+      background: #FFFFFF;
+      border-radius: 10px;
+      border-top-right-radius: 30px;
+      border-top-left-radius: 30px;
+      text-align: center;
+      margin-bottom: 10px;
+}
+.menu-section .card-text h5 {
+      color: var(--dark-color);
+      font-weight: var(--fw5);
+      font-size: 20px;
+      padding: 14px 0 5px;
+}
+.menu-section .card-text .price-heart {
+      display: flex;
+      justify-content: space-between;
+      padding: 13px 22px; 
+}
+.menu-section .card-text .price-heart p {
+      color: var(--dark-color);
+      font-size: 22px;
+      font-weight: var(--fw5);
+}
+.menu-section .card-text .price-heart svg {
+      font-size: 22px;
+      transition: all 0.3s ease;
+}
+.menu-section .card-text .price-heart svg:hover {
+      color: var(--primary-color);
+}
+.menu-section-btn {
+      margin: 80px 0 45px;
+}
 /* ................. 
 MEDIA QUERIES
 ................. */
