@@ -88,7 +88,7 @@ REUSABLE SELECTOR
 .col-4 {
       flex-basis: 100%;
 }
-
+ /* for tablet screen  */
 @media screen and (min-width: 767px) {
       .row {   
             display: flex;
@@ -205,11 +205,11 @@ nav .nav-menu li a:hover  {
       color: var(--dark-color);
 }
 nav .nav-menu ul li:nth-child(6),
- nav .nav-menu ul li:nth-child(6) .btn {
+nav .nav-menu ul li:nth-child(6) .btn {
        margin-top: 20px;
        font-size: 16px;
        font-weight:var(--fw7);
- }
+}
 nav .nav-menu ul li:nth-child(6) svg {
       font-size: 18px;
       padding-right: 20px;
@@ -368,12 +368,39 @@ MENU SECTION STYLING
 .menu-section-btn {
       margin: 80px 0 45px;
 }
+
+
+/* ................. 
+MEMBERSHIP SECTION STYLING
+................. */
+.membership-section {
+      margin-bottom: 80px ;
+      text-align: center;
+
+}
+.membership-section .background {
+      background: url(/images/unsplash_2lWGQ02DGL8.jpg) no-repeat center;
+      /* height: 100*;  */
+      padding: 93px 0;
+      border-radius: 10px;
+}
+.membership-section h5 {
+      color: #FFFFFF;
+      font-size: 32px;
+      font-weight: var(--fw7);
+      max-width: 422px;
+      margin: 0 auto ;
+      padding-bottom: 30px;
+      /* text-align: center; */
+}
+
 /* ................. 
 MEDIA QUERIES
 ................. */
 /* for tablet screen  */
  @media screen and  (min-width: 767px) { 
-       nav {
+       /* Navigation section  */
+      nav {
              padding:  35px;
       }
       nav .nav-logo p {
@@ -398,13 +425,14 @@ MEDIA QUERIES
 
  /* for desktop screen  */
   @media screen and  (min-width: 1024px) { 
+      /* Navigation section  */
       nav .nav-menu {   
             display: flex;   
       }
       nav .nav-menu ul{   
             display: flex; 
       }
-       nav .nav-menu ul li{   
+      nav .nav-menu ul li{   
             margin-left: 37px;
             margin-top: 20px;
       }
