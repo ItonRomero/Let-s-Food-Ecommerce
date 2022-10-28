@@ -111,8 +111,12 @@ REUSABLE SELECTOR
       .col-4 {
             flex-basis: 25%;
             padding: 10px;
-            min-width: 300px;
+           
       }
+      .menu-section .col-4 {
+            min-width: 300px; 
+      }
+
       .col-5{
             width: 160px;
       }
@@ -130,9 +134,7 @@ REUSABLE SELECTOR
 
  /* for desktop screen  */
   @media screen and  (min-width: 1024px) {
-        .col-4 {
-            min-width: 200px;
-      }
+      
   }
 
 
@@ -394,6 +396,75 @@ MEMBERSHIP SECTION STYLING
       /* text-align: center; */
 }
 
+
+/* ................. 
+FOOTER SECTION STYLING
+................. */
+.footer-section {
+      background: url(/images/footer-image.jpg) center no-repeat;
+      background-color: var(--bg-color);
+      padding: 99px 0 47px;
+}
+.footer-section .column-1 h5 {
+      font-weight: var(--fw6);
+      font-size: 24px;
+      color: var(--dark-color);
+}
+.footer-section .column-1 .flexitem:nth-child(1) {
+      align-items: flex-end;
+      margin-bottom: 25px;
+}
+.footer-section .column-1 p {
+      font-size: 20px;
+      margin-bottom: 20px;
+}
+.footer-section .social-media svg {
+      background: white;
+      color: var(--dark-color);
+      box-shadow: 0px 4px 12px rgba(29, 29, 29, 0.15);
+      padding: 10px;
+      border-radius: 50px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      transition: all 0.5s ease;
+      
+}
+.footer-section .social-media svg:nth-child(2) {
+      padding-right: 13px;
+      padding-left: 13px;
+}
+.footer-section .social-media svg:hover {
+      background:var(--primary-color);
+}
+.footer-section .desc h5 {
+      font-size: 20px;
+      font-weight: var(--fw5);
+      color: var(--dark-color);
+      margin-bottom: 31px;
+}
+
+.footer-section .desc p {
+      margin-bottom: 16px;
+      font-size: 18px;
+}
+
+.footer-section .col-4.desc div { 
+      margin-left: 20px;
+}   
+
+.copyright {
+      text-align: center;
+}
+
+hr {
+      margin-top: 90px;
+      margin-bottom: 45px;
+}
+
+ .footer-section .row{ 
+      text-align: left;
+ }
+
 /* ................. 
 MEDIA QUERIES
 ................. */
@@ -420,6 +491,15 @@ MEDIA QUERIES
       nav .nav-menu ul li:nth-child(6) {
             display: none;
       }
+
+      .footer-section .row{ 
+            align-items: baseline;
+            justify-content: left;
+      } 
+      .footer-section  .col-4 {
+            flex-basis: 22%; 
+      }
+         
  }
 
 
@@ -448,6 +528,19 @@ MEDIA QUERIES
       nav .nav-btns ul li:nth-child(4) svg {
             display: none;
       }
+       
+       .footer-section .col-4 .column-1{
+            min-width: 326px; 
+      } 
+       
+       .menu-section .col-4 {
+            min-width: 200px;
+      }
+
+      .footer-section  .col-4 {
+            flex-basis: 23%; 
+      }
+       
   }
 
 
