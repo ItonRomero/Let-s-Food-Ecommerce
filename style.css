@@ -466,6 +466,61 @@ hr {
  }
 
 /* ................. 
+REVIEWS SECTION STYLING
+................. */
+.review-section {
+      margin-bottom: 80px;
+}
+.review-section h3 {
+      margin-bottom: 9px;
+}
+.review-section h2 {
+      margin-bottom: 32px;
+}
+.review-section .flexitem {
+      justify-content: center;
+}
+.review-section .card {
+      background: #F1F1F1;
+      border-radius: 10px;
+      align-items: center;
+      padding: 28px 20px 29px;
+}
+.review-section .card {
+      background: #F1F1F1;
+      border-radius: 10px;
+      align-items: center;
+      padding: 28px 20px 29px;
+}
+.review-section .card .info{
+    align-items: flex-start;
+}
+.review-section .card img{
+    margin: 0 18px 24px 0;
+}
+.review-section .card h5{
+   color: var(--dark-color);
+   font-size: 20px;
+   font-weight: var(--fw5);
+   margin-bottom: 11px;
+}
+.review-section .card li{
+   color: var(--primary-color);
+}
+
+.review-section .dots svg {
+      color: #FFCB45;
+      margin-top: 15px;
+      margin-right: 14px;
+      font-size: 8px;
+      opacity: 0.3;
+} 
+.review-section .dots svg.active{
+      opacity: 1;
+} 
+
+
+/* ................. 
 MEDIA QUERIES
 ................. */
 /* for tablet screen  */
