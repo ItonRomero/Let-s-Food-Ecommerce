@@ -325,13 +325,14 @@ MENU SECTION STYLING
 .menu-section .card {
       background: #F1F1F1;
       border-radius: 10px;
-      filter: drop-shadow(2px 5px 12px rgba(0, 0, 0, 0.15));
+      /* filter: drop-shadow(2px 5px 12px rgba(0, 0, 0, 0.15)); */
+       filter: drop-shadow(2px 5px 12px rgba(0, 0, 0, 0.15)); 
       transition: all 0.3s ease;
 }
 .menu-section .card:hover {
       border-radius: 50px;
       filter: drop-shadow(2px 5px 12px rgba(0, 0, 0, 0.5));  
-      scale: 1.1; 
+      /* scale: 1.50;  */
 }
 .menu-section .card img {
       margin: 13px 25px 16px;
@@ -480,25 +481,28 @@ REVIEWS SECTION STYLING
 .review-section .flexitem {
       justify-content: center;
 }
-.review-section .card {
+
+.review-section .content {
       background: #F1F1F1;
       border-radius: 10px;
       align-items: center;
       padding: 28px 20px 29px;
+      display: none;
+      transition: all 5s ease;
 }
-.review-section .card {
-      background: #F1F1F1;
-      border-radius: 10px;
-      align-items: center;
-      padding: 28px 20px 29px;
+
+.review-section .content.active{
+      display: block;
 }
-.review-section .card .info{
+
+
+.review-section .content .info{
     align-items: flex-start;
 }
-.review-section .card img{
+.review-section .content img{
     margin: 0 18px 24px 0;
 }
-.review-section .card h5{
+.review-section .content.active h5{
    color: var(--dark-color);
    font-size: 20px;
    font-weight: var(--fw5);
@@ -506,16 +510,28 @@ REVIEWS SECTION STYLING
 }
 .review-section .card li{
    color: var(--primary-color);
+ 
 }
-
-.review-section .dots svg {
-      color: #FFCB45;
+.review-section .dots button {
+     border: 0;
+     background: transparent;
+}
+.review-section .dots .dot {
+      content: '';
+      width: 10px;
+      height: 10px;
       margin-top: 15px;
+      border: 0;
+      background: transparent;
+      background: var(--primary-color);
+      border-radius: 50%;
       margin-right: 14px;
-      font-size: 8px;
       opacity: 0.3;
+      cursor: pointer;
+
+      transition: all 0.5s ease;
 } 
-.review-section .dots svg.active{
+.review-section .dots .dot.active{
       opacity: 1;
 } 
 
