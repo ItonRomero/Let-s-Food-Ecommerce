@@ -1,17 +1,11 @@
-const revDots = document.querySelectorAll(".dot")
-const revContent = document.querySelectorAll(".content");
+// const revDots = document.querySelectorAll(".dot")
+// const revContent = document.querySelectorAll(".content");
 
 window.addEventListener('DOMContentLoaded', () => {
     reviewFunction()
       
 
 });
-
-// window.addEventListener('DOMcontentLoaded', function() {
-    
-
-// });
-
 
 // For active menu links in navigation 
 const menuLinks = document.querySelectorAll(".menu-links");
@@ -24,7 +18,7 @@ menuLinks.forEach(function(e) {
       })
 })
 
-
+// For showing menu button in navigation 
 const navMenu = document.querySelector(".nav-menu");
 const menuIcon = document.querySelector(".menu-icon");
  menuIcon.addEventListener("click", function(){
@@ -35,84 +29,81 @@ const menuIcon = document.querySelector(".menu-icon");
 
 
 
-let reviewFunction = () => {
-       // Reviews dot buttons
-      revDots.forEach(function (e) {
-             e.addEventListener("click", function (e){
-            const id = e.target.dataset.id;
-            if (id) { 
-                  // remove selected from other buttons
-                  revDots.forEach(function(dot) {
-                  dot.classList.remove("active")
-                  });
-            }
+// let reviewFunction = () => {
+//        // Reviews dot buttons
+//       revDots.forEach(function (e) {
+//              e.addEventListener("click", function (e){
+//             const id = e.target.dataset.id;
+//             if (id) { 
+//                   // remove selected from other buttons
+//                   revDots.forEach(function(dot) {
+//                   dot.classList.remove("active")
+//                   });
+//             }
             
-            e.target.classList.add("active");
+//             e.target.classList.add("active");
 
-            // hide other articles
-            revContent.forEach(function (content) {
-                  content.classList.remove("active")
-            });
-            const element = document.getElementById(id);
-            element.classList.add("active");
-            });
-      });
+//             // hide other articles
+//             revContent.forEach(function (content) {
+//                   content.classList.remove("active")
+//             });
+//             const element = document.getElementById(id);
+//             element.classList.add("active");
+//             });
+//       });
+// }
+
+
+// For dragging reviews card
+let slider = document.querySelector(".slider");
+let innerSlider = document.querySelector(".inner-slider")
+
+let pressed = false;
+let startx;
+let x;
+
+slider.addEventListener('mousedown', (e) => {
+      pressed = true;
+      startx = e.offsetX - innerSlider.offsetLeft;
+      slider.style.cursor = 'grabbing';
+
+})
+
+slider.addEventListener('mouseenter', () => {
+      slider.style.cursor = 'grab';
+})
+
+slider.addEventListener('mouseup', () => {
+      slider.style.cursor = 'grab';
+})
+
+window.addEventListener('mouseup', () => {
+      pressed = false;
+})
+
+slider.addEventListener('mousemove', (e) => {
+      if(!pressed) return;
+      e.preventDefault();
+
+      x = e.offsetX
+
+      innerSlider.style.left = `${ x - startx}px`;
+      checkboundary()
+})
+
+function checkboundary() {
+      let outer = slider.getBoundingClientRect();
+      let inner = innerSlider.getBoundingClientRect();
+
+      if(parseInt(innerSlider.style.left) > 0) {
+            innerSlider.style.left = '0px';
+      }else if (inner.right < outer.right){
+            innerSlider.style.left = `-${inner.width - outer.width}px`
+      }
 }
 
-// function getElement(selection) {
-//   const element = document.querySelector(selection);
-//   if (element) {
-//     return element;
-//   }
-//   throw new Error(
-//     `Please check "${selection}" selector, no such element exists`
-//   );
-// }
+checkboundary()
 
 
-// function Review(image, name, stars, comment) {
-//       this.image = image;
-//       this.name = name;
-//       this.stars = stars;
-//       this.comment = comment; 
-
-//       this.card = getElement('.test')
-//       this.displayReviews = this.displayReview.bind(this);
-//       this.card.innerHTML = this.displayReviews;
-// }
-
-
-
-
-
- 
-//  Review.prototype.displayReview = function (items) {
-       
-//       this.card.innerHTML = items.map(function(item){
-//               return `<div class="info flexitem">
-//                      <div class="img">
-//                              <img src="${item.image}" alt="">
-//                          </div>
-//                           <div class="name">
-//                                <h5>${item.name}</h5>
-//                                <ul class="flexitem">
-//                                      <li${item.stars}</i></li>
-//                                      <li><i class="fa-solid fa-star"></i></li>
-//                                      <li><i class="fa-solid fa-star"></i></li>
-//                                      <li><i class="fa-solid fa-star"></i></li>
-//                                      <li><i class="fa-solid fa-star-half-stroke"></i></li>
-//                                </ul>
-//                           </div>
-//                          </div>
-//                          <div class="desc">
-//                          <p>${item.comment}</p>
-//                         </div>`  
-//       }).join('')
-//  }
-
- 
-
-                     
-// const firstReview = new Review("/images/review 1.png", "Jayson Romero", 5 , "teasdasdasdasdasdasdas");
-
-// console.log(firstReview.displayReviews());
+// const revDots = document.querySelectorAll(".dot")
+// const revContent = document.querySelectorAll(".content");
