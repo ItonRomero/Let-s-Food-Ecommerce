@@ -1,8 +1,7 @@
-// const revDots = document.querySelectorAll(".dot")
-// const revContent = document.querySelectorAll(".content");
+
 
 window.addEventListener('DOMContentLoaded', () => {
-    reviewFunction()
+//     reviewFunction()
       
 
 });
@@ -27,31 +26,39 @@ const menuIcon = document.querySelector(".menu-icon");
 });
     
 
+const revDots = document.querySelectorAll(".dot")
+const revContent = document.querySelectorAll(".content");
 
-
-// let reviewFunction = () => {
-//        // Reviews dot buttons
-//       revDots.forEach(function (e) {
-//              e.addEventListener("click", function (e){
-//             const id = e.target.dataset.id;
-//             if (id) { 
-//                   // remove selected from other buttons
-//                   revDots.forEach(function(dot) {
-//                   dot.classList.remove("active")
-//                   });
-//             }
+let reviewFunction = () => {
+       // Reviews dot buttons
+      revDots.forEach(function (e) {
+             e.addEventListener("click", function (e){
+            const id = e.target.dataset.id;
+            if (id) { 
+                  // remove selected from other buttons
+                  revDots.forEach(function(dot) {
+                  dot.classList.remove("active")
+                  });
+            }
             
-//             e.target.classList.add("active");
+            e.target.classList.add("active");
+            checkboundary()
+            // hide other articles
+            revContent.forEach(function (content) {
+                  content.classList.remove("active")
+            });
+            const element = document.getElementById(id);
+            element.classList.add("active");
+            checkboundary()
+            });
+      });
+}
 
-//             // hide other articles
-//             revContent.forEach(function (content) {
-//                   content.classList.remove("active")
-//             });
-//             const element = document.getElementById(id);
-//             element.classList.add("active");
-//             });
-//       });
-// }
+
+
+
+
+
 
 
 // For dragging reviews card
@@ -97,8 +104,10 @@ function checkboundary() {
 
       if(parseInt(innerSlider.style.left) > 0) {
             innerSlider.style.left = '0px';
+              reviewFunction()
       }else if (inner.right < outer.right){
             innerSlider.style.left = `-${inner.width - outer.width}px`
+              reviewFunction()
       }
 }
 

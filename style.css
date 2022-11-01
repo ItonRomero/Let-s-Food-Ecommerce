@@ -381,6 +381,7 @@ REVIEWS SECTION STYLING
       /* margin: 0 auto;
       padding: 0 0.938em; */
       /* position: relative; */
+      /* text-align: left; */
 }
 .review-section .header{
       text-align: center;
@@ -394,27 +395,36 @@ REVIEWS SECTION STYLING
 .review-row {
       display: flex;
       flex-wrap: wrap;
+      flex-direction: row-reverse;
+      align-items:flex-start;
 }
 
 .slider-col-2,
 .review-col-2 {
       flex-basis: 100%;
+      text-align: left;
+      /* border: 1px red solid; */
 }
 .review-section .slider-col-2 {
-      position: relative;
-      height: 210px;
-      max-height: 210px;
-       /* border: 1px double; */
-       overflow: hidden;
+      /* position: relative; */
+      height: 380px;
+      /* max-height: 50px; */
+      text-align: center;
+      /* border-radius: ; */
+      /* border: 1px double; */
+       /* overflow: hidden; */
+
 }
 
 .review-section .slider {
       position: relative;
-      top: 0;
-      left: 0;
+      max-height: 250px;
+      /* max-height: 250px; */ 
+      /* top: 0;
+      left: 0; */
       width: 98%;
       height: 100%;
-      /* overflow: hidden; */
+      overflow: hidden;
 }
 
 .review-section .inner-slider {
@@ -424,7 +434,7 @@ REVIEWS SECTION STYLING
       left: 0px;
       height: 100%;
       width: 270%;
-      margin: 0 20px;
+      /* margin: 0 20px; */
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       pointer-events: none;
@@ -465,13 +475,15 @@ REVIEWS SECTION STYLING
    color: var(--primary-color);
  
 }
-/* .review-section .dots button {
+.review-section .dots button {
      border: 0;
      margin-bottom: 20px;
      background: transparent;
+     margin-bottom: 30px;
 }
 .review-section .dots .dot {
       content: '';
+      z-index: 500;
       width: 10px;
       height: 10px;
       margin-top: 15px;
@@ -482,32 +494,37 @@ REVIEWS SECTION STYLING
       margin-right: 14px;
       opacity: 0.3;
       cursor: pointer;
-
+      margin-bottom: 30px;
       transition: all 0.5s ease;
 } 
 .review-section .dots .dot.active{
       opacity: 1;
-}  */
+} 
 
+.review-section .review-col-2  {
+        border-radius: 50px;
+}
 .review-section .grid-content img {
       width: 100%;
       height:100%;
       object-fit:cover;
       max-height: 208px;
+    
 }
 .review-section  .review-col-2 .grid-content {
       display: grid;
       grid-template-columns: auto auto;
-      object-fit: cover;
+      /* object-fit: cover; */
       gap: 15px;
-     margin-top: 30px;
+      margin-top: 50px;
+      
 }
 
 .review-section  .review-col-2 .item1 {
        grid-column: 1 / span 2;
        max-height: 187px;
        width: 100%;
-       object-fit: cover;
+       border-top-left-radius: 10px;
 }
 /* ................. 
 MEMBERSHIP SECTION STYLING
@@ -640,6 +657,12 @@ MEDIA QUERIES
       .footer-section  .col-4 {
             flex-basis: 22%; 
       }
+
+      .review-section .slider {
+      max-height: 210px;
+    
+}
+
          
  }
 
@@ -681,7 +704,20 @@ MEDIA QUERIES
       .footer-section  .col-4 {
             flex-basis: 23%; 
       }
-       
+       .review-section .review-col-2 .grid-content {
+             margin-top: 0;
+       }
+      .slider-col-2 {
+         flex-basis: 57%; 
+         padding-left: 70px; 
+      }
+      .review-col-2 {
+        flex-basis: 43%;
+        /* margin-left: 50px; */
+      }
+      .review-section .header{
+      text-align: left;
+}
   }
 
 
