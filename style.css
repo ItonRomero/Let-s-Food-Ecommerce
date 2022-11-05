@@ -223,7 +223,7 @@ nav .nav-menu .menu-links {
 } 
 nav .nav-menu .menu-links::after {
     content: '';
-    width: 0;
+    width: 0%;
     height: 4px;
     background: var(--primary-color);
     position: absolute;
