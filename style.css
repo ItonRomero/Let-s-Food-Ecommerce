@@ -252,7 +252,7 @@ HERO SECTION STYLING
 ................. */
  
 .hero-section {
-      background: url(/images/shapes-bg.jpg) no-repeat center ;
+      background: url(images/shapes-bg.jpg) no-repeat center ;
       background-color: var(--bg-color);
      
 
@@ -537,7 +537,7 @@ MEMBERSHIP SECTION STYLING
 
 }
 .membership-section .background {
-      background: url(/images/unsplash_2lWGQ02DGL8.jpg) no-repeat center;
+      background: url(images/unsplash_2lWGQ02DGL8.jpg) no-repeat center;
       /* height: 100*;  */
       padding: 93px 0;
       border-radius: 10px;
@@ -557,7 +557,7 @@ MEMBERSHIP SECTION STYLING
 FOOTER SECTION STYLING
 ................. */
 .footer-section {
-      background: url(/images/footer-image.jpg) center no-repeat;
+      background: url(images/footer-image.jpg) center no-repeat;
       background-color: var(--bg-color);
       padding: 99px 0 47px;
 }
